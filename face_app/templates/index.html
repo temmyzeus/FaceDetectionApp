@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Face App {{ title }}
+{% endblock title %}
+
+{% block content %}
+    <div class="content">
+        <form action="#" enctype="multipart/form-data" method="POST">
+            {{ form.image.label() }}
+            <br>
+            {{ form.image() }}
+            <br>
+            {{ form.submit() }}
+            <!-- Open Jinja Styles If block to check for errors in file upload -->
+            {% if form.image.errors %}
+                {% for error in form.image.errors %}
+                    <span class="text-danger">{{ error }}</span>
+                {% endfor %}
+            {% endif %}
+        </form>
+    </div>
+    {% if image_filename %}
+    <div class="media">
+        <img src="{{ url_for('static', filename='images' + '/' + image_filename) }}" alt="sample_image">
+    </div>
+    {% endif %}
+{% endblock content %}

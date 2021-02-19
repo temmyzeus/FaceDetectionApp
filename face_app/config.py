@@ -1,0 +1,1 @@
+image_types_allowed = ["jpeg", "jpg", "png"]

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-5.0.0-beta1-dist/css/bootstrap.min.css') }}" crossorigin="anonymous">
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-bg-dark">
+        <div class="container">
+            <a class="navbar-brand mr-4" href="/">Face Detection App</a>
+        </div>
+    </nav>
+
+    {% block content %}
+    {% endblock %}
+    
+    <script src="{{ url_for('static', filename='bootstrap-5.0.0-beta1-dist/js/bootstrap.min.js') }}" crossorigin="anonymous"></script>
+</body>
+</html>

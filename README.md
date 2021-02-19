@@ -1,0 +1,1 @@
+# This project is a Face Detection App that basically takes pictures and detect the faces in the image
