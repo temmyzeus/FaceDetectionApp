@@ -5,15 +5,6 @@ from PIL import Image, ImageDraw
 import numpy as np
 import os
 
-def fetch_image(filename: str):
-    """
-    Fetch image files with filename given
-
-    @param: filename: File name of Image to fetch [str]
-    """
-    image_pth = os.path.join(app.root_path, "static", "images", filename)
-    return Image.open(image_pth)
-
 def detect_face(img):
     global image_array
     image = img
