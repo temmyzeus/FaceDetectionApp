@@ -6,7 +6,6 @@ import numpy as np
 import os
 
 def detect_face(img):
-    global image_array
     image = img
     image_draw = ImageDraw.Draw(image)
     image_array = np.array(image)
