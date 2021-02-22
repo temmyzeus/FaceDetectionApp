@@ -1,6 +1,6 @@
-*.jpg
-*.jpeg
-*.png
-*.gif
+images/*.jpg
+images/*.jpeg
+images/*.png
+images/*.gif
 __pycache__/
 /.vscode
