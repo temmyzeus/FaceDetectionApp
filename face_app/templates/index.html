@@ -25,4 +25,9 @@
         <img src="{{ url_for('static', filename='images' + '/' + image_filename) }}" alt="sample_image">
     </div>
     {% endif %}
+    {% if image_filename %}
+        <form action="{{ url_for('download_file', filename=image_filename) }}" method="get">
+            <button class="btn" style="width:100%"><i class="fa fa-download"></i> Download</button>
+        </form>
+    {% endif %}
 {% endblock content %}
